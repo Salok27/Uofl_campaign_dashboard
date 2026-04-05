@@ -1,0 +1,22 @@
+import pandas as pd
+import json
+import os
+
+#CSV file path
+script_dir = os.path.dirname(os.path.abspath(__file__))
+csv_file_path = os.path.join(script_dir, "2026_Programming_Challenge.csv")
+
+
+# Read CSV file into a DataFrame
+df = pd.read_csv(csv_file_path)
+
+
+
+# Convert DataFrame to JSON
+# orient="records" create a separate JSON object for each row in the DataFrame
+json_data = df.to_json(orient="records")  
+
+# Save JSON data to a file
+json_file_path = os.path.join(script_dir, "campaign_data.json")
+with open(json_file_path, 'w') as json_file:
+    json_file.write(json_data)
