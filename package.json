@@ -1,12 +1,15 @@
 {
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "gh-pages": "^6.3.0"
   },
   "name": "uofl-campaign-dashboard",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "install-all": "cd 02-backend && npm install && cd ../01-frontend && npm install",
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
     "start:backend": "cd 02-backend && npm install && node server.js",
@@ -49,5 +52,5 @@
   "bugs": {
     "url": "https://github.com/Salok27/Uofl_campaign_dashboard/issues"
   },
-  "homepage": "https://github.com/Salok27/Uofl_campaign_dashboard#readme"
+  "homepage": "https://Salok27.github.io/Uofl_campaign_dashboard"
 }
