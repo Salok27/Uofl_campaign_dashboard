@@ -1,0 +1,53 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "name": "uofl-campaign-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "cd 02-backend && npm install && cd ../01-frontend && npm install",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd 02-backend && npm install && node server.js",
+    "start:frontend": "cd 01-frontend && npm install && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ansi-regex": "^5.0.1",
+    "ansi-styles": "^4.3.0",
+    "chalk": "^4.1.2",
+    "cliui": "^8.0.1",
+    "color-convert": "^2.0.1",
+    "color-name": "^1.1.4",
+    "emoji-regex": "^8.0.0",
+    "escalade": "^3.2.0",
+    "get-caller-file": "^2.0.5",
+    "has-flag": "^4.0.0",
+    "is-fullwidth-code-point": "^3.0.0",
+    "require-directory": "^2.1.1",
+    "rxjs": "^7.8.2",
+    "shell-quote": "^1.8.3",
+    "string-width": "^4.2.3",
+    "strip-ansi": "^6.0.1",
+    "supports-color": "^8.1.1",
+    "tree-kill": "^1.2.2",
+    "tslib": "^2.8.1",
+    "wrap-ansi": "^7.0.0",
+    "y18n": "^5.0.8",
+    "yargs": "^17.7.2",
+    "yargs-parser": "^21.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salok27/Uofl_campaign_dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Salok27/Uofl_campaign_dashboard/issues"
+  },
+  "homepage": "https://github.com/Salok27/Uofl_campaign_dashboard#readme"
+}
