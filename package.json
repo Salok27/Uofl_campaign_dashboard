@@ -8,8 +8,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "install-all": "cd 02-backend && npm install && cd ../01-frontend && npm install",
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
     "start:backend": "cd 02-backend && npm install && node server.js",
